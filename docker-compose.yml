@@ -1,0 +1,38 @@
+
+services:
+#  angular_app:
+#    container_name: angular_billarsoft
+#    image: angular-billarsoft:1.0.0
+#    build: ./angular/my-front-app/
+#    ports:
+#      - 4200:4200
+#    depends_on:
+#      - spring_app
+  spring_app:
+    container_name: spring_billarsoft
+    image: spring-billarsoft:1.0.0
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=jdbc:postgresql://billarsoft_db:5432/billarsoft
+      - DATABASE_USERNAME=santgodev
+      - DATABASE_PASSWORD=Santy.29
+    depends_on:
+      - billarsoft_db
+  billarsoft_db:
+    container_name: billarsoft_db
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=santgodev
+      - POSTGRES_PASSWORD=Santy.29
+      - POSTGRES_DB=billarsoft
+    volumes:
+      - billarsoft_db_data:/var/lib/postgresql/data
+
+
+volumes:
+  billarsoft_db_data:
+
