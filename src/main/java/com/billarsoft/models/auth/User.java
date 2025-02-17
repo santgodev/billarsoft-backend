@@ -24,7 +24,7 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false)ñ
+    @Column(nullable = false)
     private String password;
 
     @ManyToOne( targetEntity = Role.class)

@@ -1,5 +1,4 @@
-package com.billarsoft.controllers.dto;
-
+package com.billarsoft.controllers.bussines.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,9 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RoleDTO {
-    private Integer id;
-    private String name;
-    private String description;
+public class TablePoolDTO {
 
+    private Integer id;
+    private String status;
+    private String name;
+    private Integer clientId;
 }

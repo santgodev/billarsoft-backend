@@ -1,7 +1,7 @@
 package com.billarsoft.controllers.auth;
 
 
-import com.billarsoft.controllers.dto.ModuleDTO;
+import com.billarsoft.controllers.auth.DTO.ModuleDTO;
 import com.billarsoft.services.auth.Impl.ModuleServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,5 @@
-package com.billarsoft.controllers.dto;
+package com.billarsoft.controllers.auth.DTO;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

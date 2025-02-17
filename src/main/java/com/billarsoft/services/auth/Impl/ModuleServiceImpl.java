@@ -20,7 +20,7 @@ public class ModuleServiceImpl implements IModuleService {
 
     @Override
     public List<Module> getModulesAndComponentsByRoleIdWithPermissionsToList2(Integer id) {
-        return moduleRepository.findByModulePermissionsModulePermissionsIdRoleIdAndModulePermissionsListtTrue(id);
+        return moduleRepository.findByModulePermissionsModulePermissionsIdRoleIdAndModulePermissionsListTrue(id);
     }
 
     @Override

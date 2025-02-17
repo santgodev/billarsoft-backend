@@ -1,9 +1,8 @@
 package com.billarsoft.controllers.auth;
 
 
-import com.billarsoft.controllers.dto.UserDTO;
+import com.billarsoft.controllers.auth.DTO.UserDTO;
 import com.billarsoft.models.auth.User;
-import com.billarsoft.repositorys.auth.IRoleRepository;
 import com.billarsoft.services.auth.Impl.RoleServiceImpl;
 import com.billarsoft.services.auth.Impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

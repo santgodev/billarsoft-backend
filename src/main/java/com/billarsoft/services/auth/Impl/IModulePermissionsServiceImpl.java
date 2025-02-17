@@ -55,19 +55,19 @@ public class IModulePermissionsServiceImpl implements IModulePermissionsService 
             ModulePermissions modulePermissionsToUpdate = ModulePermissions.builder()
                     .modulePermissionsId(modulePermissionsInDB.get().getModulePermissionsId())
                     .build();
-            if (modulePermissions.getListt() != null) {
-                modulePermissionsToUpdate.setListt(modulePermissions.getListt());
+            if (modulePermissions.getList() != null) {
+                modulePermissionsToUpdate.setList(modulePermissions.getList());
             }
-            if (modulePermissions.getInsertt() != null) {
-                modulePermissionsToUpdate.setInsertt(modulePermissions.getInsertt());
-            }
-
-            if (modulePermissions.getUpdatee() != null) {
-                modulePermissionsToUpdate.setUpdatee(modulePermissions.getUpdatee());
+            if (modulePermissions.getInsert() != null) {
+                modulePermissionsToUpdate.setInsert(modulePermissions.getInsert());
             }
 
-            if (modulePermissions.getDeletee() != null) {
-                modulePermissionsToUpdate.setDeletee(modulePermissions.getDeletee());
+            if (modulePermissions.getUpdate() != null) {
+                modulePermissionsToUpdate.setUpdate(modulePermissions.getUpdate());
+            }
+
+            if (modulePermissions.getDelete() != null) {
+                modulePermissionsToUpdate.setDelete(modulePermissions.getDelete());
             }
             modulePermissionsRepository.save(modulePermissions);
             return true;

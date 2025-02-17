@@ -1,16 +1,14 @@
 package com.billarsoft.controllers.auth;
 
 
-import com.billarsoft.controllers.dto.ModulePermissionsDTO;
+import com.billarsoft.controllers.auth.DTO.ModulePermissionsDTO;
 import com.billarsoft.models.auth.Module;
 import com.billarsoft.models.auth.ModulePermissions;
 import com.billarsoft.models.auth.ModulePermissionsId;
 import com.billarsoft.models.auth.Role;
-import com.billarsoft.services.auth.IModuleService;
 import com.billarsoft.services.auth.Impl.IModulePermissionsServiceImpl;
 import com.billarsoft.services.auth.Impl.ModuleServiceImpl;
 import com.billarsoft.services.auth.Impl.RoleServiceImpl;
-import jakarta.servlet.http.PushBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,10 +40,10 @@ public class ModulePermissionsController {
                         .moduleName(moduleService.getModuleById(
                                 modulePermissionsToMap.getModulePermissionsId().getModuleId()
                         ).get().getName())
-                        .list(modulePermissionsToMap.getListt())
-                        .insert(modulePermissionsToMap.getInsertt())
-                        .update(modulePermissionsToMap.getUpdatee())
-                        .delete(modulePermissionsToMap.getDeletee())
+                        .list(modulePermissionsToMap.getList())
+                        .insert(modulePermissionsToMap.getInsert())
+                        .update(modulePermissionsToMap.getUpdate())
+                        .delete(modulePermissionsToMap.getDelete())
                         .build()).toList();
         return ResponseEntity.ok(modulePermissionsDTO);
     }
@@ -75,10 +73,10 @@ public class ModulePermissionsController {
                 .build();
 
         ModulePermissions modulePermissions = ModulePermissions.builder()
-                .listt(modulePermissionsDTO.getList())
-                .insertt(modulePermissionsDTO.getInsert())
-                .updatee(modulePermissionsDTO.getUpdate())
-                .deletee(modulePermissionsDTO.getDelete())
+                .list(modulePermissionsDTO.getList())
+                .insert(modulePermissionsDTO.getInsert())
+                .update(modulePermissionsDTO.getUpdate())
+                .delete(modulePermissionsDTO.getDelete())
                 .module(module)
                 .role(role)
                 .modulePermissionsId(modulePermissionsId)
@@ -124,10 +122,10 @@ public class ModulePermissionsController {
                     .build();
 
             ModulePermissions modulePermissions = ModulePermissions.builder()
-                    .listt(true)
-                    .insertt(false)
-                    .updatee(false)
-                    .deletee(false)
+                    .list(true)
+                    .insert(false)
+                    .update(false)
+                    .delete(false)
                     .module(module)
                     .role(role)
                     .modulePermissionsId(modulePermissionsId)
@@ -157,10 +155,10 @@ public class ModulePermissionsController {
                     .role(role.get())
                     .module(module.get())
                     .modulePermissionsId(modulePermissionsId)
-                    .listt(modulePermissionsDTO.getList())
-                    .insertt(modulePermissionsDTO.getInsert())
-                    .updatee(modulePermissionsDTO.getUpdate())
-                    .deletee(modulePermissionsDTO.getDelete())
+                    .list(modulePermissionsDTO.getList())
+                    .insert(modulePermissionsDTO.getInsert())
+                    .update(modulePermissionsDTO.getUpdate())
+                    .delete(modulePermissionsDTO.getDelete())
                     .build();
             boolean responseService = modulePermissionsService.updateModulePermissions(modulePermissionsToUpdate);
             if (responseService) {

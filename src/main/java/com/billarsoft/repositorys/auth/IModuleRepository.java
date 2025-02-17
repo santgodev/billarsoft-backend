@@ -10,7 +10,7 @@ import java.util.List;
 public interface IModuleRepository extends JpaRepository<Module, Integer> {
 
     //este lo dejo de ejemplo pero esta muy largo el nombre para ser legible
-    List<Module> findByModulePermissionsModulePermissionsIdRoleIdAndModulePermissionsListtTrue(Integer id);
+    List<Module> findByModulePermissionsModulePermissionsIdRoleIdAndModulePermissionsListTrue(Integer id);
 
     @Query("select m from Module m join m.modulePermissions mp join mp.role r where r.id = :id ")
     List<Module> findModulesWithPermissionsToListByRoleId(@Param("id") Integer id);

@@ -1,4 +1,4 @@
-package com.billarsoft.controllers.dto;
+package com.billarsoft.controllers.auth.DTO;
 
 import com.billarsoft.models.auth.Role;
 import lombok.AllArgsConstructor;

@@ -1,16 +1,13 @@
 package com.billarsoft.controllers.auth;
 
 
-import com.billarsoft.controllers.dto.UserDTO;
-import com.billarsoft.models.auth.Module;
-import com.billarsoft.models.auth.Role;
+import com.billarsoft.controllers.auth.DTO.UserDTO;
 import com.billarsoft.models.auth.User;
 import com.billarsoft.services.auth.Impl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 
 

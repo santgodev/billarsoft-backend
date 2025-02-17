@@ -17,13 +17,13 @@ public class ModulePermissions {
     private ModulePermissionsId modulePermissionsId;
 
     @Column (name = "list")
-    private Boolean listt;
+    private Boolean list;
     @Column (name = "insert")
-    private Boolean insertt;
+    private Boolean insert;
     @Column (name = "update")
-    private Boolean updatee;
+    private Boolean update;
     @Column (name = "delete")
-    private Boolean deletee;
+    private Boolean delete;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
